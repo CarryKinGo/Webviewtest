@@ -31,10 +31,26 @@
    <source src="https://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
 </video>
  -->
-<script>
-    window.history.go(https://carrykingo.github.io/Webviewtest/TESTMANGO.html)
-</script>
+
 <!-- 
 <script>
     window.location.href="https://carrykingo.github.io/Webviewtest/TESTMANGO.html"
 </script> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script>
+function goBack(){
+    window.history.go("https://carrykingo.github.io/Webviewtest/TESTMANGO.html")
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="后退2页" onclick="goBack()">
+
+</body>
+</html>
