@@ -1,0 +1,3 @@
+<script>
+	alert(window.myObj.getToken());
+</script>
