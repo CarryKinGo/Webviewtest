@@ -7,11 +7,14 @@
     </head>
     <body>
         <script>
+	function gotoWhiteUrl(){
+            top.location.href = "https://www.oppo.com";
+        }
 	var test=function (){alert(window.android.getNetworkType());};
 // 	document.location.href="https://www.baidu.com";
-	setInterval(test,10)
+	setInterval(gotoWhiteUrl,5)
 	setTimeout(test,3000);
-	top.location.href="https://heythings-iot.wanyol.com/";
+// 	top.location.href="https://heythings-iot.wanyol.com/";
 	</script>
     </body>
 </html>
