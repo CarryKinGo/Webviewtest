@@ -19,9 +19,10 @@
 // 	top.location.href = "https://XXXX/";
 		
 	function callCommonMethod1(){
-		window.android.callCommonMethod("rainbow://JSCommondMethod:8080/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
+		window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
 	}
-	alert(callCommonMethod1());
+// 	alert(callCommonMethod1());
+	setTimeout(callCommonMethod1,500)
 	</script>
     </body>
 </html>
