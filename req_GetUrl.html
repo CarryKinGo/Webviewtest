@@ -7,16 +7,21 @@
     </head>
     <body>
         <script>
-	function gotoWhiteUrl(){
-		document.location.href = "https://www.baidu.com/";
-        }
+// 	function gotoWhiteUrl(){
+// 		document.location.href = "https://www.baidu.com/";
+//         }
 // 	var test1 = function (){alert(window.xxx.login());};
-	var test2 = function (){alert(window.xxx.getToken());};
+// 	var test2 = function (){alert(window.xxx.getToken());};
 // 	document.location.href = "https://www.baidu.com";
-	setInterval(gotoWhiteUrl,5)
+// 	setInterval(gotoWhiteUrl,5)
 // 	setTimeout(test1,500)
-	setTimeout(test2,500);
+// 	setTimeout(test2,500);
 // 	top.location.href = "https://XXXX/";
+		
+	function callCommonMethod1(){
+		window.android.callCommonMethod("rainbow://com.platform.usercenter.loanmarket.LoanMarketNativeMethod:8080/controlNativeTitle?{\"isshow\":true,\"statusBarColor\":0}");
+	}
+	callCommonMethod1();
 	</script>
     </body>
 </html>
