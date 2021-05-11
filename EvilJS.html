@@ -8,6 +8,7 @@
     
     <body>
         <div id="content">webview</div>
+        <script src="https://github.com/Sunzxyong/JsBridge/blob/master/jsbridge/src/main/assets/RainbowBridge.js" type="text/javascript"></script>
         <script>
        
         function gotoWhiteUrl(){
@@ -17,20 +18,20 @@
         
         function test(){
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/showToast?{\"message\":\"this is the toast messag\"}");
+            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
             
-            RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
+//             RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
 
-                if(msg.status.code == 0){
+//                 if(msg.status.code == 0){
 
-                    var token = msg.data.token;
+//                     var token = msg.data.token;
 
-                    alert(token)
+//                     alert(token)
 
-                    }
+//                     }
 
-            });
+//             });
             
-            var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/getToken?{}");
             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
 //             alert(result);
         }
