@@ -18,8 +18,19 @@
         function test(){
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/showToast?{\"message\":\"this is the toast messag\"}");
             
+            RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
+
+                if(msg.status.code == 0){
+
+                    var token = msg.data.token;
+
+                    alert(token)
+
+                    }
+
+            });
+            
             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/getToken?{}");
-            RainbowBridge.onComplete(2441591,result);
             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
 //             alert(result);
         }
