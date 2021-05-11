@@ -20,12 +20,12 @@
 //             document.getElementById("content").innerText = "成功调用getToken：\n"+result;
 //         }
           
-	    var test1 = function (){alert(window.android.getInstantPlatformVersion());};
-// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}"));};
+// 	    var test1 = function (){alert(window.android.getInstantPlatformVersion());};
+	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}"));};
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
-        setTimeout(test1,500);//延迟3秒执行
+        setTimeout(test2,500);//延迟3秒执行
         </script>
     </body>
 </html>
