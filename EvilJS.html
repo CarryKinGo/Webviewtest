@@ -10,10 +10,10 @@
         <p id="content">WebviewTest</p>
         <script>
        
-        function gotoWhiteUrl(){
-            //window.location.href = "https://www.baidu.com";
-            top.location.href = "https://www.oppo.com";
-        }
+//         function gotoWhiteUrl(){
+//             //window.location.href = "https://www.baidu.com";
+//             top.location.href = "https://www.oppo.com";
+//         }
         
         function test(){
             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"qid\":\"10086\"}");
@@ -24,8 +24,9 @@
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"qid\":\"10086\"}"));};
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
-        setInterval(gotoWhiteUrl,5);//5毫秒
-        setTimeout(test,3000);//延迟3秒执行
+//         setInterval(gotoWhiteUrl,5);//5毫秒
+//         setTimeout(test,3000);//延迟3秒执行
+        test();
         </script>
     </body>
 </html>
