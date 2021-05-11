@@ -15,13 +15,13 @@
             top.location.href = "https://www.oppo.com";
         }
         
-//         function test(){
-//             var result = window.android.getInstantPlatformVersion();
-//             document.getElementById("content").innerText = "成功调用getToken：\n"+result;
-//         }
+        function test(){
+            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"qid\":\"10086\"}");
+            document.getElementById("content").innerText = "成功调用getToken：\n"+result;
+        }
           
 // 	    var test1 = function (){alert(window.android.getInstantPlatformVersion());};
-	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"qid\":\"10086\"}"));};
+// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"qid\":\"10086\"}"));};
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
