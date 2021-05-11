@@ -9,6 +9,7 @@
     <body>
         <p id="content">WebviewTest</p>
         <script>
+        document.getElementById("content").innerText = "成功调用getToken：\n";
 
         function gotoWhiteUrl(){
             //window.location.href = "https://www.baidu.com";
@@ -25,7 +26,7 @@
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
-        setTimeout(test2,1000);//延迟3秒执行
+        setTimeout(test,3000);//延迟3秒执行
         </script>
     </body>
 </html>
