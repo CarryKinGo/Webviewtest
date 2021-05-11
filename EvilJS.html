@@ -15,19 +15,19 @@
             top.location.href = "https://www.oppo.com";
         }
         
-//         function test(){
-//             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"phoneNumber\":\"10086\"}");
+        function test(){
+            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"phoneNumber\":\"10086\"}");
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/getToken?{}");
-//             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
+            document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
 //             alert(result);
         }
           
 // 	    var test1 = function (){alert(window.android.getInstantPlatformVersion());};
-	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{}"));};
+// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{}"));};
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
-        setTimeout(test2,1000);//延迟3秒执行
+        setTimeout(test,1000);//延迟3秒执行
         </script>
     </body>
 </html>
