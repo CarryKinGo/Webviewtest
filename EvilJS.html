@@ -16,7 +16,7 @@
         }
         
         function test(){
-            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{\"phoneNumber\":\"10086\"}");
+            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/getToken?{}");
             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
 //             alert(result);
