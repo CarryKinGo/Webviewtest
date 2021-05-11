@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name='viewport' content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+        <title></title>
+    </head>
+    
+    <body>
+        <p id="content">WebviewTest</p>
+        <script>
+
+        function gotoWhiteUrl(){
+            //window.location.href = "https://www.baidu.com";
+            top.location.href = "https://www.oppo.com";
+        }
+        
+        function test(){
+            var result = window.android.getInstantPlatformVersion();
+            document.getElementById("content").innerText = "成功调用getToken：\n"+result;
+        }
+          
+// 	var test1 = function (){alert(window.android.getInstantPlatformVersion());};
+// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}"));};
+// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
+        
+        setInterval(gotoWhiteUrl,5);//5毫秒
+        setTimeout(test,3000);//延迟3秒执行
+        </script>
+    </body>
+</html>
