@@ -97,7 +97,8 @@
             if (PrivateMethod.isAndroid()) {
                 var jsonStr = PrivateMethod.json2Str(param);
                 var uri = JS_BRIDGE_PROTOCOL_SCHEMA + "://" + clazz + ":" + port + "/" + method + "?" + jsonStr;
-                win.prompt(uri, "");
+//                 win.prompt(uri, "");
+                win.android.callCommonMethod(uri);
             }
         },
         isAndroid: function () {
