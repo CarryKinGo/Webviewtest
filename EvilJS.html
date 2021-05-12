@@ -17,7 +17,7 @@
         
         function test(){
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/showToast?{\"message\":\"this is the toast messag\"}");
-            var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
+//             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
             
             RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
                 if(msg.status.code == 0){
