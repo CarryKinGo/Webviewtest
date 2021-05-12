@@ -16,17 +16,8 @@
         }
         
         function test(){
-//             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/showToast?{\"message\":\"this is the toast messag\"}");
-//             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
-            
-            RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){alert(JSON.stringify(msg))});
-            
-//             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
+            RainbowBridge.callMethod('JSCommondMethod','getClientContext',{},function(msg){alert(JSON.stringify(msg))});
         }
-          
-// 	    var test1 = function (){alert(window.android.getInstantPlatformVersion());};
-// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getClientContext?{}"));};
-// 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
         setTimeout(test,1000);//延迟3秒执行
