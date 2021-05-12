@@ -19,12 +19,7 @@
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod:2441591/showToast?{\"message\":\"this is the toast messag\"}");
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
             
-            RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
-//                 if(msg.status.code == 0){
-                    var token = msg.data.token;
-                    alert(token)
-//                     }
-            });
+            RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){alert(JSON.stringify(msg))});
             
 //             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
         }
