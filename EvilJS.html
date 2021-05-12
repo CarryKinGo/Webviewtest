@@ -16,7 +16,7 @@
         }
         
         function test(){
-            RainbowBridge.callMethod('JSCommondMethod','onStartSmsCode',{'smsLenght':6},function(msg){alert(JSON.stringify(msg))});
+            RainbowBridge.callMethod('JSCommondMethod','openBrowser',{'url':'https://www.baidu.com'},function(msg){});
         }
         
         setInterval(gotoWhiteUrl,5);//5毫秒
