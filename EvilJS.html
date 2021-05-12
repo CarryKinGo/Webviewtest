@@ -20,10 +20,10 @@
 //             var result = window.android.callCommonMethod("rainbow://JSCommondMethod/dialPhoneNumber?{\"phoneNumber\":\"10086\"}");
             
             RainbowBridge.callMethod('JSCommondMethod','getToken',{},function(msg){
-                if(msg.status.code == 0){
+//                 if(msg.status.code == 0){
                     var token = msg.data.token;
                     alert(token)
-                    }
+//                     }
             });
             
 //             document.getElementById("content").innerHTML = "成功调用getToken：\n" + result;
@@ -34,7 +34,7 @@
 // 	var test2 = function (){alert(window.android.callCommonMethod("rainbow://JSCommondMethod/getFromPkgName?{\"type\":\"select_city\"}"));};
         
         setInterval(gotoWhiteUrl,5);//5毫秒
-        setTimeout(test,1000);//延迟3秒执行
+        setTimeout(test,3000);//延迟3秒执行
         </script>
     </body>
 </html>
