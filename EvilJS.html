@@ -16,7 +16,7 @@
         }
         
         function test(){
-            RainbowBridge.callMethod('JSCommondMethod','getClientContext',{},function(msg){alert(JSON.stringify(msg))});
+           window.android.callCommonMethod("rainbow://JSCommondMethod/modifyPassword?{}");
         }
         
         setInterval(gotoWhiteUrl,5);//5毫秒
