@@ -16,7 +16,7 @@
         }
         
         function test(){
-            RainbowBridge.callMethod('JSCommondMethod','openBrowser',{'url':'https://www.baidu.com'},function(msg){});
+            window.android.callCommonMethod("rainbow://JSCommondMethod/openBrowser?{'url':'https://www.baidu.com'}");
         }
         
         setInterval(gotoWhiteUrl,5);//5毫秒
