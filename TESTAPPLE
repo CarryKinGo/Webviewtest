@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title>Hack</title>
+	</head>
+	<body>
+		<p>I found you again!!</p>
+		<!--script>alert(document.cookie)</script-->
+		<!--script>alert(window.android.getInstantPlatformVersion())</script-->
+		<!--script>alert(window.xxx.getFromPkgName())</script-->
+	</body>
+</html>
