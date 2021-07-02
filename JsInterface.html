@@ -10,18 +10,18 @@
         <p id="content">Hybrid</p>
         <script>
 
-        function gotoWhiteUrl(){
-            //window.location.href = "https://www.baidu.com";
-            top.location.href = "https://www.baidu.com";
-        }
+//         function gotoWhiteUrl(){
+//             //window.location.href = "https://www.baidu.com";
+//             top.location.href = "https://www.baidu.com";
+//         }
         
         function test(){
             var result = window.myObj.getToken();
             document.getElementById("content").innerText = "成功调用getToken：\n"+result;
         }
-        
-        setInterval(gotoWhiteUrl,50);//5毫秒
-        setTimeout(test,1000);//延迟3秒执行
+        test();
+//         setInterval(gotoWhiteUrl,50);//5毫秒
+//         setTimeout(test,1000);//延迟3秒执行
         </script>
     </body>
 </html>
