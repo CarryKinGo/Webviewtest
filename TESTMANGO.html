@@ -11,9 +11,8 @@
 <!-- 		<script>alert(window.xxxx.getFromPkgName())</script> -->
 <!-- 		<script>location.href = "https://carrykingo.github.io/Webviewtest/TESTAPPLE.html"</script> -->
   		<script>
-		function load(){
-			alert("Frame is loaded");
-		}
+		iframe.onload = function() {
+   		 console.log("Local iframe is now loaded."); // "Local iframe is now loaded." };
 		</script>
 		<iframe src="https://carrykingo.github.io/Webviewtest/TESTAPPLE.html" onload="load()"></iframe>
 	</body>
