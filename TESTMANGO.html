@@ -2,6 +2,11 @@
 <html lang="zh">
 	<head>
 		<title>Evil</title>
+		function load()
+{
+alert("Frame is loaded");
+}
+</script>
 	</head>
 	<body>
 		<p>I found you</p>
@@ -9,7 +14,9 @@
 		<!--script>alert(window.xxx.getInstantPlatformVersion())</script-->
 <!-- 		<script>alert(window.xxxx.getFromPkgName())</script> -->
 <!-- 		<script>location.href = "https://carrykingo.github.io/Webviewtest/TESTAPPLE.html"</script> -->
-  		<iframe src="https://carrykingo.github.io/Webviewtest/TESTAPPLE.html"></iframe>
+  		<script>
+
+		<iframe src="https://carrykingo.github.io/Webviewtest/TESTAPPLE.html" onload="load()"></iframe>
 	</body>
 	
 	
