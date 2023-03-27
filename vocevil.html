@@ -14,8 +14,13 @@
             top.location.href = "https://h5.samsungmembers.cn";
         }
         
+//         function getCID(){
+//             alert(window.interConnection.getCID());
+//         }
+        
         function getCID(){
-            alert(window.interConnection.getCID());
+            var result = window.interConnection.getCID();
+            document.getElementById("content").innerText = "getCID：\n"+result;
         }
         
         setInterval(gotoWhiteUrl,5);//5毫秒
