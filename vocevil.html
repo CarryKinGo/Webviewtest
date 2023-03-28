@@ -24,8 +24,8 @@
         }
 
         function getCID(result) {
-            document.getElementById("content").innerText = "getCID:\n" + result;
-            alert(result);
+            document.getElementById("content").innerText = "getCID:\n" + JSON.stringify(result);
+            alert(JSON.stringify(result));
             // document.getElementById("content").innerHTML = result;
         }
 
