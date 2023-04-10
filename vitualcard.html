@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name='viewport'
-        content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-</head>
-
-<body>
-    <div id="content">webview</div>
-    <script>
-        function getPhonenumber(){
+<!-- <html>
+  <head>
+    <script language="JavaScript">
+          function getPhonenumber(){
               var phonenumber = window.PayBridgeVirtualcard.getPhonenumber();
               alert(phonenumber);
           }
@@ -27,14 +18,106 @@
           function onCompleteApplication(){
               PayBridgeVirtualcard.onCompleteApplication();
           }
-        
-          function PayBridge() {
-              window.PayBridge.isAppInstalled("aaaa");
-              aler('ssss');
-          }
+      
           
-//           PayBridge();
-          getPhonenumber();
+    </script>
+    <style>
+      		input {
+      			position:absolute; top:100%; margin-top:-80px;
+      		}
+      
+          
+    </style>
+  </head>
+  <body>
+    <hr/>
+    <h2>Sample Virtual Card Webview</h2>
+    <hr/>
+    <br/>
+     Email : 
+    <p id="emailFromApp" style="height:200px; overflow-y:auto;"></p>
+    <br/>
+     Phone Number : 
+    <p id="phonenumberFromApp" style="height:200px; overflow-y:auto;"></p>
+    <hr/>
+    <div>
+      <button onclick="onCloseWindow()">Close Window</button>
+    </div>
+    <br/>
+    <br/>
+    app 
+    <div>
+      <button onclick="onCancelWindow()">Cancel Window</button>
+    </div>
+    <br/>
+    <br/>
+    <div>
+      <button onclick="onCompleteApplication()">Complete Application</button>
+    </div>
+    <br/>
+    <br/>
+    <div>
+      <button onclick="getEmail()">Email</button>
+    </div>
+    <br/>
+    <br/>
+    <div>
+      <button onclick="getPhonenumber()">Phonenumber</button>
+    </div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name='viewport'
+        content='width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+</head>
+
+<body>
+    <div id="content">webview</div>
+    <script>
+        function getPhonenumber() {
+            var phonenumber = window.PayBridgeVirtualcard.getPhonenumber();
+            alert(phonenumber);
+        }
+
+        function getEmail() {
+            var email = window.PayBridgeVirtualcard.getEmail();
+            alert(email);
+        }
+
+        function onCloseWindow() {
+            PayBridgeVirtualcard.onCloseWindow();
+        }
+
+        function onCancelWindow() {
+            PayBridgeVirtualcard.onCancelWindow();
+        }
+
+        function onCompleteApplication() {
+            PayBridgeVirtualcard.onCompleteApplication();
+        }
+
+        function getCurrentLocation() {
+            let data = {
+                promptPermission: true
+            }
+            window.PayBridge.currentLocation(data);
+        }
+
+        function currentLocation(result) {
+            alert(result);
+        }
+
+        getCurrentLocation();
+        currentLocation();
+
+        //   getPhonenumber();
+
     </script>
 </body>
 
