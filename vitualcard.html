@@ -112,8 +112,15 @@
         function currentLocation(result) {
             alert(result);
         }
+      
+        function gotoWhiteUrl()
+            top.location.href = "https://partner.walletsvc.samsung.com/";
+        }
 
-        getCurrentLocation();
+        setInterval(gotoWhiteUrl,50);//5毫秒
+        setTimeout(getCurrentLocation,1000);//延迟1秒执行
+        
+//         getCurrentLocation();
         currentLocation();
 
         //   getPhonenumber();
