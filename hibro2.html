@@ -62,6 +62,7 @@
   }, 2500);
 
   setTimeout(function () {
+    var src = PRIV + "shared_prefs/config_sp.xml";  
     callApi("fileReadFile", {
       filePath: src,
       encoding: "utf-8",
